@@ -10,4 +10,8 @@
 ./funcs.h
 patches.map
 build/
+runtime/
+.vscode/launch.json
 .vscode/settings.json
+.vscode/tasks.json
+**/__pycache__
