@@ -10,6 +10,20 @@ id = "permanent_razor_sword"
 # Version of this mod.
 version = "1.0.0"
 
+
+# The name that will show up for this mod in the mod menu. This should be human readable.
+display_name = "Permenant Razor Sword"
+
+# The description that will show up when this mod is displayed in the mod menu. This should be human readable.
+description =  """
+The Razor Sword is not a permenant weapon upgrade, like the Gilded Sword.
+Does not effect the any in-game dialog at this time."""
+
+# A short description that will show up in this mod's entry in the mod list. This should be human readable and kept short
+# to prevent it from being cut off due to the limited space.
+short_description = "The Razor Sword is not a permenant weapon upgrade, like the Gilded Sword."
+
+
 # Authors of this mod.
 authors = [ "LT_Schmiddy" ]
 
