@@ -5,23 +5,27 @@
 
 # Unique ID of this mod. Pick something long enough that it'll never be the same as any other mod.
 # The name displayed in the mod management menu is separate from this so this doesn't need to be human readable.
-id = "permanent_razor_sword"
+id = "Permanent_Razor_Sword"
 
 # Version of this mod.
 version = "1.0.1"
-
 
 # The name that will show up for this mod in the mod menu. This should be human readable.
 display_name = "Permenant Razor Sword"
 
 # The description that will show up when this mod is displayed in the mod menu. This should be human readable.
 description =  """
-The Razor Sword is not a permenant weapon upgrade, like the Gilded Sword.
-Does not effect the any in-game dialog at this time."""
+The Razor Sword is not a permenant weapon upgrade, like the Gilded Sword.<br/>
+<br/>
+Does not effect the any in-game dialog at this time. In addition, there is a known bug where the
+blacksmith will not recognize that you have the Razor Sword when you reset time.<br/>
+<br/>
+These will be fixed in a future update.
+"""
 
 # A short description that will show up in this mod's entry in the mod list. This should be human readable and kept short
 # to prevent it from being cut off due to the limited space.
-short_description = "The Razor Sword is not a permenant weapon upgrade, like the Gilded Sword."
+short_description = "The Razor Sword is now a permenant weapon upgrade, like the Gilded Sword."
 
 
 # Authors of this mod.
@@ -58,4 +62,6 @@ data_reference_syms_files = [ "Zelda64RecompSyms/mm.us.rev1.datasyms.toml", "Zel
 mod_filename = "permanent_razor_sword_1.0.1"
 
 # Additional files to include in the mod.
-additional_files = [ ]
+additional_files = [
+    "thumb.dds"
+ ]
