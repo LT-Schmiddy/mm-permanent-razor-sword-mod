@@ -1,5 +1,7 @@
-import pathlib, subprocess, os, shutil, tomllib
+import pathlib, subprocess, os, shutil, tomllib, zipfile
 import build_n64recomp_tools as bnt
+
+USING_ASSETS_ARCHIVE = True
 
 project_root = pathlib.Path(__file__).parent
 
@@ -12,7 +14,18 @@ build_nrm_file = build_dir.joinpath(f"{mod_data['inputs']['mod_filename']}.nrm")
 runtime_mods_dir = project_root.joinpath("runtime/mods")
 runtime_nrm_file = runtime_mods_dir.joinpath(f"{mod_data['inputs']['mod_filename']}.nrm")
 
+assets_archive_path = project_root.joinpath("assets_archive.zip")
+assets_extract_path = project_root.joinpath("assets_extracted")
+
+
 def run_build():
+    # Unzipping Archive:
+    if USING_ASSETS_ARCHIVE and not assets_extract_path.is_dir():
+        print(f"Assets folder '{assets_extract_path.name}' not found. Extracting assets from '{assets_archive_path.name}'...")
+        with zipfile.ZipFile(assets_archive_path, 'r') as zip_ref:
+            zip_ref.extractall(assets_extract_path)
+            
+    
     if not bnt.build_dir.exists():
         print("N64Recomp tools not built. Building now...")
         bnt.rebuild_tools();
