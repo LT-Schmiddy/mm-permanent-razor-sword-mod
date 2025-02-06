@@ -12,6 +12,7 @@
 *.nrm
 ./funcs.h
 patches.map
+assets_extracted/
 build/
 runtime/
 .vscode/settings.json
