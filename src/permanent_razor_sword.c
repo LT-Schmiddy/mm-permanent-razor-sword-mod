@@ -13,9 +13,6 @@ RECOMP_PATCH s32 func_8083FFEC(PlayState* play, Player* this) {
     return false;
 }
 
-/**
- * Used by Song of Time (when clicking "Yes") and (indirectly) by the "Dawn of the New Day" cutscene
- */
 RECOMP_PATCH void Sram_SaveEndOfCycle(PlayState* play) {
     s16 sceneId;
     s32 j;
@@ -34,7 +31,7 @@ RECOMP_PATCH void Sram_SaveEndOfCycle(PlayState* play) {
     }
 
     sceneId = Play_GetOriginalSceneId(play->sceneId);
-    Play_SaveCycleSceneFlags(&play->state);
+    Play_SaveCycleSceneFlags(play);
 
     play->actorCtx.sceneFlags.chest &= sPersistentCycleSceneFlags[sceneId].chest;
     play->actorCtx.sceneFlags.switches[0] &= sPersistentCycleSceneFlags[sceneId].switch0;
@@ -123,7 +120,7 @@ RECOMP_PATCH void Sram_SaveEndOfCycle(PlayState* play) {
         }
     }
 
-    for (i = 0; i < ARRAY_COUNT(gAmmoItems); i++) {
+    for (i = 0; i < ITEM_NUM_SLOTS; i++) {
         if (gAmmoItems[i] != ITEM_NONE) {
             if ((gSaveContext.save.saveInfo.inventory.items[i] != ITEM_NONE) && (i != SLOT_PICTOGRAPH_BOX)) {
                 item = gSaveContext.save.saveInfo.inventory.items[i];
@@ -152,6 +149,7 @@ RECOMP_PATCH void Sram_SaveEndOfCycle(PlayState* play) {
     if (gSaveContext.save.saveInfo.playerData.health < 0x30) {
         gSaveContext.save.saveInfo.playerData.health = 0x30;
     }
+
 
     // The actual changes to the function:
     if (GET_CUR_EQUIP_VALUE(EQUIP_TYPE_SWORD) <= EQUIP_VALUE_SWORD_RAZOR) {
@@ -224,13 +222,13 @@ RECOMP_PATCH void Sram_SaveEndOfCycle(PlayState* play) {
     gSaveContext.save.saveInfo.skullTokenCount &= ~0x0000FFFF;
     gSaveContext.save.saveInfo.unk_EA0 = 0;
 
-    gSaveContext.save.saveInfo.unk_E64[0] = 0;
-    gSaveContext.save.saveInfo.unk_E64[1] = 0;
-    gSaveContext.save.saveInfo.unk_E64[2] = 0;
-    gSaveContext.save.saveInfo.unk_E64[3] = 0;
-    gSaveContext.save.saveInfo.unk_E64[4] = 0;
-    gSaveContext.save.saveInfo.unk_E64[5] = 0;
-    gSaveContext.save.saveInfo.unk_E64[6] = 0;
+    gSaveContext.save.saveInfo.alienInfo[0] = 0;
+    gSaveContext.save.saveInfo.alienInfo[1] = 0;
+    gSaveContext.save.saveInfo.alienInfo[2] = 0;
+    gSaveContext.save.saveInfo.alienInfo[3] = 0;
+    gSaveContext.save.saveInfo.alienInfo[4] = 0;
+    gSaveContext.save.saveInfo.alienInfo[5] = 0;
+    gSaveContext.save.saveInfo.alienInfo[6] = 0;
 
     Sram_ClearHighscores();
 
@@ -249,4 +247,3 @@ RECOMP_PATCH void Sram_SaveEndOfCycle(PlayState* play) {
 
     Horse_ResetHorseData(play);
 }
-

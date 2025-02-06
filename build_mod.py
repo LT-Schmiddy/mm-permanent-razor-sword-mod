@@ -15,7 +15,7 @@ runtime_mods_dir = project_root.joinpath("runtime/mods")
 runtime_nrm_file = runtime_mods_dir.joinpath(f"{mod_data['inputs']['mod_filename']}.nrm")
 
 assets_archive_path = project_root.joinpath("assets_archive.zip")
-assets_extract_path = project_root.joinpath("assets_extracted")
+assets_extract_path = project_root.joinpath("assets_extracted/assets")
 
 
 def run_build():
