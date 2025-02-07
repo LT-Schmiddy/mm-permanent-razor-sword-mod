@@ -2,16 +2,28 @@
 
 RECOMP_IMPORT("*", int recomp_printf(const char* fmt, ...));
 
-// Patches a function in the base game that's used to check if the player should quickspin.
+
 RECOMP_PATCH s32 func_8083FFEC(PlayState* play, Player* this) {
-    // CUR_FORM_EQUIP(EQUIP_SLOT_B) = ITEM_SWORD_RAZOR;
-    // SET_EQUIP_VALUE(EQUIP_TYPE_SWORD, EQUIP_VALUE_SWORD_RAZOR);
 
     if (this->heldItemAction == PLAYER_IA_SWORD_RAZOR) {
         return true;
     }
     return false;
 }
+
+// Corrected to ensure zubora recognizes your razor sword on future cycles:
+RECOMP_PATCH s32 func_80B41528(PlayState* play) {
+    if (GET_CUR_EQUIP_VALUE(EQUIP_TYPE_SWORD) == EQUIP_VALUE_SWORD_GILDED) {
+        return 0xC4C;
+    }
+
+    if (GET_CUR_EQUIP_VALUE(EQUIP_TYPE_SWORD) == EQUIP_VALUE_SWORD_RAZOR) {
+        return 0xC45;
+    }
+
+    return 0xC3B;
+}
+
 
 RECOMP_PATCH void Sram_SaveEndOfCycle(PlayState* play) {
     s16 sceneId;
