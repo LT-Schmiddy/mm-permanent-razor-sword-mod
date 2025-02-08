@@ -2,9 +2,8 @@
 
 RECOMP_IMPORT("*", int recomp_printf(const char* fmt, ...));
 
-
+// Razor Sword no longer degrades:
 RECOMP_PATCH s32 func_8083FFEC(PlayState* play, Player* this) {
-
     if (this->heldItemAction == PLAYER_IA_SWORD_RAZOR) {
         return true;
     }
