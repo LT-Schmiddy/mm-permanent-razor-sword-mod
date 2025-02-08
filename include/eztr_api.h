@@ -4,7 +4,7 @@
 #include "modding.h"
 #include "global.h"
 
-RECOMP_IMPORT("EZ_Text_Replacer_API", void EZTR_ReplaceText(
+RECOMP_IMPORT("MM_EZ_Text_Replacer_API", void EZTR_Basic_ReplaceText(
     s16 textId, 
     u8 text_box_type, 
     u8 text_box_y_pos, 
@@ -16,7 +16,7 @@ RECOMP_IMPORT("EZ_Text_Replacer_API", void EZTR_ReplaceText(
     char* content
 ));
 
-#define EZTR_ON_INIT RECOMP_CALLBACK("EZ_Text_Replacer_API", EZTR_OnDeclareTextReplacement)
+#define EZTR_ON_INIT RECOMP_CALLBACK("MM_EZ_Text_Replacer_API", EZTR_OnInit)
 
 #define EZTR_NO_VALUE 0xffff
 
