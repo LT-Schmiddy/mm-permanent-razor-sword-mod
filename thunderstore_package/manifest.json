@@ -3,5 +3,7 @@
     "version_number": "2.0.0",
     "website_url": "https://github.com/LT-Schmiddy/mm-permanent-razor-sword-mod",
     "description": "The Razor Sword is now a permenant weapon upgrade, like the Gilded Sword.",
-    "dependencies": []
+    "dependencies": [
+        "LT_Schmiddy-EZ_Text_Replacer_API-1.1.0"
+    ]
 }
