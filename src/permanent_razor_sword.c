@@ -35,17 +35,19 @@ RECOMP_HOOK("Sram_SaveEndOfCycle") void remember_sword(PlayState* play) {
 
 RECOMP_HOOK_RETURN("Sram_SaveEndOfCycle") void restore_sword(PlayState* play) {
 
+    // SET_EQUIP_VALUE(EQUIP_TYPE_SWORD, remembered_equip);
+
     if (CUR_FORM == 0) {
         if ((remembered_stolen_item_1 >= ITEM_SWORD_GILDED) 
             || (remembered_stolen_item_2 >= ITEM_SWORD_GILDED)
-            || (remembered_equip >= ITEM_SWORD_GILDED)
+            || (remembered_equip >= EQUIP_VALUE_SWORD_GILDED)
             ) {
             CUR_FORM_EQUIP(EQUIP_SLOT_B) = ITEM_SWORD_GILDED;
             SET_EQUIP_VALUE(EQUIP_TYPE_SWORD, EQUIP_VALUE_SWORD_GILDED);
         
         } else if ((remembered_stolen_item_1 == ITEM_SWORD_RAZOR) 
             || (remembered_stolen_item_2 == ITEM_SWORD_RAZOR)
-            || (remembered_equip == ITEM_SWORD_RAZOR)
+            || (remembered_equip == EQUIP_VALUE_SWORD_RAZOR)
             ) {
             CUR_FORM_EQUIP(EQUIP_SLOT_B) = ITEM_SWORD_RAZOR;
             SET_EQUIP_VALUE(EQUIP_TYPE_SWORD, EQUIP_VALUE_SWORD_RAZOR);
@@ -56,13 +58,13 @@ RECOMP_HOOK_RETURN("Sram_SaveEndOfCycle") void restore_sword(PlayState* play) {
     } else {
         if ((remembered_stolen_item_1 >= ITEM_SWORD_GILDED) 
             || (remembered_stolen_item_2 >= ITEM_SWORD_GILDED)
-            || (remembered_equip >= ITEM_SWORD_GILDED)
+            || (remembered_equip >= EQUIP_VALUE_SWORD_GILDED)
             ) {
             BUTTON_ITEM_EQUIP(0, EQUIP_SLOT_B) = ITEM_SWORD_GILDED;
             SET_EQUIP_VALUE(EQUIP_TYPE_SWORD, EQUIP_VALUE_SWORD_GILDED);
         } else if ((remembered_stolen_item_1 == ITEM_SWORD_RAZOR) 
             || (remembered_stolen_item_2 == ITEM_SWORD_RAZOR)
-            || (remembered_equip == ITEM_SWORD_RAZOR)
+            || (remembered_equip == EQUIP_VALUE_SWORD_RAZOR)
             ) {
             BUTTON_ITEM_EQUIP(0, EQUIP_SLOT_B) = ITEM_SWORD_RAZOR;
             SET_EQUIP_VALUE(EQUIP_TYPE_SWORD, EQUIP_VALUE_SWORD_RAZOR);
