@@ -1,6 +1,6 @@
 # Permenant Razor Sword
 
-Do you *(like me)* love the look of the Razor Sword, but think that the 100 swing limit makes it kinda pointless? Then I have the mod for you! This mod makes the Razor Sword is now a permenant sword upgrade, like the Gilded Sword. It no londer reverts to the Kokiri sword after 100 uses, and is preserved when playing the Song of Time.
+Do you *(like me)* love the look of the Razor Sword, but think that the 100 swing limit makes it kinda pointless? Then I have the mod for you! This mod makes the Razor Sword a permenant sword upgrade, like the Gilded Sword. It no londer reverts to the Kokiri sword after 100 uses, and is preserved when playing the Song of Time.
 
 This does not invalidate the existence of the Gilded Sword, since the Gilded Sword does 3x the damage of the Kokiri Sword, whereas the Razor Sword only does 2x.
 
