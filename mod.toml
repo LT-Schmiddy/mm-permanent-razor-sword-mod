@@ -8,18 +8,16 @@
 id = "MM_Permanent_Razor_Sword"
 
 # Version of this mod.
-version = "2.1.0"
+version = "2.1.1"
 
 # The name that will show up for this mod in the mod menu. This should be human readable.
 display_name = "Permanent Razor Sword"
 
 # The description that will show up when this mod is displayed in the mod menu. This should be human readable.
 description =  """
-The Razor Sword is now a permanent weapon upgrade, like the Gilded Sword.<br/>
-<br/>
+The Razor Sword is now a permanent weapon upgrade, like the Gilded Sword.
+
 All in-game dialog referencing the 100 use limit is replaced, and Zubora now recognizes your Razor Sword after rewinding time.
-<br/>
-<br/>
 """
 
 # A short description that will show up in this mod's entry in the mod list. This should be human readable and kept short
@@ -58,7 +56,7 @@ elf_path = "build/mod.elf"
 func_reference_syms_file = "Zelda64RecompSyms/mm.us.rev1.syms.toml"
 data_reference_syms_files = [ "Zelda64RecompSyms/mm.us.rev1.datasyms.toml", "Zelda64RecompSyms/mm.us.rev1.datasyms_static.toml" ]
 
-mod_filename = "permanent_razor_sword_2.1.0"
+mod_filename = "permanent_razor_sword_2.1.1"
 
 # Additional files to include in the mod.
 additional_files = [

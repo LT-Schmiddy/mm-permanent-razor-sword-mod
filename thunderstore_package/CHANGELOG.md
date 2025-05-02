@@ -1,5 +1,9 @@
 # Changelog
 
+## Version 2.1.1
+
+* Updated description to remove HTML tags.
+
 ## Version 2.1.0
 
 * Fixed several typos.
