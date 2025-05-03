@@ -2,7 +2,11 @@
 
 ## Version 2.1.1
 
-* Updated description to remove HTML tags.
+* No code changes. Removing version numbers from filename.
+
+## Version 2.1.1
+
+* No code changes. Updated description to remove HTML tags.
 
 ## Version 2.1.0
 
