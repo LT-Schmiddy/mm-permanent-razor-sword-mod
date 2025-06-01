@@ -1,5 +1,9 @@
 # Changelog
 
+## Version 2.2.1
+
+* No code changes.
+
 ## Version 2.2.0
 
 * Updating Gilded Sword dialog. It didn't make sense for the blacksmith to mention how the it would never break if Razor Sword wouldn't break either.

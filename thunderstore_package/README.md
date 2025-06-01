@@ -9,3 +9,5 @@ In addition, all in-game messages and dialog related to the Razor Sword have bee
 This mod requires [EZ Text Replacer API](https://thunderstore.io/c/zelda-64-recompiled/p/LT_Schmiddy/EZ_Text_Replacer_API/) to handle dialog replacement.
 
 ![Item Description Image](https://raw.githubusercontent.com/LT-Schmiddy/mm-permanent-razor-sword-mod/refs/heads/main/page_assets/Razor_Sword_Item_Description.png)
+
+Thanks to CrispyChips for the Gilded Sword dialog changes!
